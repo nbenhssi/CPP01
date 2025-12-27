@@ -1,5 +1,5 @@
 #include "Zombie.h"
-
+#include <cstdlib>
 int main()
 {
     Zombie *zombie;

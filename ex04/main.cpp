@@ -44,6 +44,5 @@ int main(int argc, char **argv)
         }
         outfile << line << '\n';
     }
-
     return 0;
 }

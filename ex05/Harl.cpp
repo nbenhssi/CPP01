@@ -1,4 +1,4 @@
-#include <Harl.hpp>
+#include "Harl.hpp"
 
 void Harl::debug()
 { 
@@ -23,28 +23,22 @@ void Harl::warning()
 void Harl::error()
 {
     std::cout << "[ERROR]" << std::endl;
-    std::cout << "This is unacceptable! I want to speak to the manager now."  <<std::endl
+    std::cout << "This is unacceptable! I want to speak to the manager now."  <<std::endl;
 }
 
-void fct()
-{
-    &Harl::debug();
-    &Harl::info();
-    &Harl::warning();
-    &Harl::error();
-}
 
 void Harl::complain( std::string level)
 {
     std::string str[] = {"DEBUG", "INFO", "WARNING", "ERROR"};
-    int i = 0;
+    void(Harl:: *fct[])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
 
     for (int i = 0; i < 4; i++)
     {
         if (str[i] == level)
-        { 
-            (this->*fct[])();
+        {
+            (this->*fct[i])();
             break;
         }
     }
 }
+

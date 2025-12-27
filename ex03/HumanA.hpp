@@ -6,7 +6,7 @@
 class HumanA
 {
     private:
-        Weapon& weapon;
+        Weapon& weapon; //ref inislised by list
         std::string name;
     public:
         HumanA(std::string name, Weapon& weapon);

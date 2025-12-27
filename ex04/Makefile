@@ -1,7 +1,8 @@
+NAME = file
+
 CXX = c++
 CXXFLAGS = -Wall -Wextra -Werror -std=c++98
 
-TARGET = file
 
 SRC = main.cpp
 
@@ -14,5 +15,8 @@ $(TARGET): $(OBJ)
 
 clean:
 	rm -f $(OBJ) $(TARGET)
+
+fclean: clean
+	$(RM) $(NAME)
 
 re: clean all
