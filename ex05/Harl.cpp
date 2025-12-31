@@ -1,5 +1,8 @@
 #include "Harl.hpp"
 
+Harl::Harl(){};
+Harl::~Harl(){};
+
 void Harl::debug()
 { 
     std::cout << "[DEBUG]" << std::endl;
@@ -41,4 +44,3 @@ void Harl::complain( std::string level)
         }
     }
 }
-

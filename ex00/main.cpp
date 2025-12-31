@@ -1,10 +1,10 @@
-#include "Zombie.h"
-#include <cstdlib>
+#include "Zombie.hpp"
+
 int main()
 {
     Zombie *zombie;
-    randomChump("noura");
     zombie = newZombie("foo");
     zombie->get_name();
+    randomChump("noura");
     delete zombie;
 }

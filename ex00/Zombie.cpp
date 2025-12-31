@@ -1,4 +1,11 @@
-#include "Zombie.h"
+#include "Zombie.hpp"
+
+Zombie::Zombie(){}
+
+Zombie::~Zombie()
+{
+    std::cout << "Zombie " << name << " is being destroyed!" << std::endl;
+}
 
 void Zombie::announce(void)
 {
